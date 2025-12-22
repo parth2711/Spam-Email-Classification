@@ -35,9 +35,21 @@ tfidf=TfidfVectorizer(stop_words='english')
 X_train_tfidf=tfidf.fit_transform(X_train)
 X_test_tfidf=tfidf.transform(X_test)
 
+#using gridsearch for optimizing the model
+grid=GridSearchCV(LinearSVC(),param_grid={'C':[0.1,1,10,100,1000]},verbose=3)
+grid.fit(X_train_tfidf,y_train)
+print(grid.best_params_)
+
 #model fitting/how it can be improved
-svmodel=LinearSVC()
+svmodel=LinearSVC(C=10)
 svmodel.fit(X_train_tfidf,y_train)
+
+#saving the model and tfidf
+with open('model.pkl','wb') as file:
+    pickle.dump(svmodel,file)
+
+with open('tfidf.pkl','wb') as file2:
+    pickle.dump(tfidf,file2)
 
 prediction=svmodel.predict(X_test_tfidf)
 
