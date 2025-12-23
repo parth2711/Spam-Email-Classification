@@ -1,6 +1,4 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 import pickle
 
 st.set_page_config(page_title="Spam Email Classifier",page_icon="📧",layout="centered")
@@ -42,7 +40,7 @@ with st.expander("ℹ️ About this app"):
 
 st.subheader("Enter message received in mail")
 
-message = st.text_area(label="Paste the email/SMS content below",height=180)
+message=st.text_area(label="Paste the email/SMS content below",height=180)
 
 messagetfidf=tfidf.transform([message])
     
