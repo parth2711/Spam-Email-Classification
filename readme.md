@@ -1,9 +1,9 @@
-**Project Overview**
+## Project Overview
 
 This project is a simple Spam Email Classification system built using Support Vector Machines (SVM).
 The goal of this project was to understand how machine learning models work on text data and how a trained model can be used in a real application. This is a learning-focused project and was built step by step while revising SVM concepts.
 
-*What this project does*
+# What this project does
 
 * Takes a text message as input
 
@@ -15,7 +15,7 @@ The goal of this project was to understand how machine learning models work on t
 
      * Not Spam (Ham)
 
-*Dataset*
+# Dataset
 
 * SMS Spam Collection Dataset by UCI
 
@@ -23,7 +23,7 @@ The goal of this project was to understand how machine learning models work on t
 
 * The dataset is imbalanced, which helped in understanding real-world data issues
 
-*Machine Learning Workflow*
+# Machine Learning Workflow
 
 1\. Loaded and cleaned the dataset
 
@@ -37,7 +37,7 @@ The goal of this project was to understand how machine learning models work on t
 
 6\. Saved the trained model and vectorizer using pickle
 
-*Tech Stack*
+# Tech Stack
 
 Python, Pandas, NumPy, scikit-learn, Streamlit
 
